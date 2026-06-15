@@ -19,8 +19,8 @@ All models are used **pre-trained** (no fine-tuning).
 ├── environment.yml          # conda environment (see Setup)
 ├── run_all.sh               # full pipeline on ONE study
 ├── run_batch.sh             # multiple studies, unattended
-├── prep_vacc_10.py          # one-off helper: reconstruct logCP10k input for
-│                            #   vaccination_study_10 from its .raw layer
+├── prep_vacc_10.py          # helper: reconstruct logCP10k input for
+│                            # vaccination_study_10 from its .raw layer
 ├── LICENSE
 ├── README.md
 └── src/
@@ -141,10 +141,9 @@ land in `eval/`, QC figures in `figures/`.
   layer (a documented manual intervention).
 * **Annotation quality.** Myeloid, B, NK, DC, and plasma populations annotate
   reliably and are marker-validated. **T-cell fine-subtyping** (naive vs memory
-  CD4/CD8) is the weakest area and drives most of the parent-level fallback —
-  reported honestly rather than over-resolved.
+  CD4/CD8) is the weakest area and drives most of the parent-level fallback.
 * **Compute.** Tested on macOS Apple Silicon (16 GB, MPS). Studies exceeding
-  ~150k cells are intended for larger-RAM / GPU compute.
+  ~150k cells could not be run and are intended for larger-RAM / GPU compute.
 
 ## License
 
